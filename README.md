@@ -44,3 +44,7 @@ Comparing the bloated JS of Jason's post this is much cleaner and friendly.
 ## Conclusion
 
 I'm not an expert on many frameworks, all I can say is that I'm more than satisfied with the Developer Experience delivered by Svelte. In the same manner it delivered a consistent and cohesive sepration of structure and presentation, as expected by the original author.
+
+Update: Got feedback from the author and got his points, specially regarding degradation for non-js enabled browsers. Changed the PasswordShowHide component to handle that and implemented better form handling.
+
+You can see a runing version at (https://sveltekit-hidepassword.vercel.app/).
