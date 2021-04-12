@@ -1,6 +1,14 @@
 <script>
+  import { onMount } from "svelte";
+
   let showPassword = false;
   let passwordInput;
+
+  let jsEnabled = false;
+
+  onMount(() => {
+    jsEnabled = true;
+  });
 
   function passwordShowHide(event) {
     showPassword = !showPassword;
@@ -14,9 +22,11 @@
   bind:this={passwordInput}
   required
 />
-<button title="Show / Hide Password" type="button" on:click={passwordShowHide}
-  >👁</button
->
+{#if jsEnabled}
+  <button title="Show / Hide Password" type="button" on:click={passwordShowHide}
+    >👁</button
+  >
+{/if}
 
 <style>
   input {
