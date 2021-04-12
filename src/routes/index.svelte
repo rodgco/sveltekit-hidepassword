@@ -1,14 +1,8 @@
 <script>
   import PasswordShowHide from "$lib/PasswordShowHide.svelte";
-
-  function handleForm(e) {
-    console.log(e);
-    console.log("Username:", e.target.elements.username.value);
-    console.log("Password:", e.target.elements.password.value);
-  }
 </script>
 
-<form action="#" method="GET" id="login" on:submit|preventDefault={handleForm}>
+<form action="/welcome" method="GET">
   <h2>Login</h2>
   <fieldset>
     <label>
@@ -32,7 +26,7 @@
 </form>
 
 <style>
-  #login {
+  form {
     flex: 1 0 auto;
     overflow: hidden;
     width: 100%;
@@ -41,21 +35,21 @@
     border-radius: 0.5em;
     box-shadow: 0.1em 0.25em 0.5em #0004;
   }
-  #login h2 {
+  form h2 {
     padding: 0.4em 0.8em;
     font-size: 1.25em;
     background: #048;
     color: #fff;
   }
-  #login fieldset {
+  form fieldset {
     padding: 1em;
     border: none;
   }
-  #login label {
+  form label {
     display: block;
     padding-bottom: 1em;
   }
-  #login input {
+  form input {
     box-sizing: border-box;
     float: left;
     width: 100%;
@@ -64,10 +58,10 @@
     border: 1px solid #5af;
     border-radius: 0.25em;
   }
-  #login .submitsAndHiddens {
+  form .submitsAndHiddens {
     padding: 0 1em;
   }
-  #login .submitsAndHiddens button {
+  form .submitsAndHiddens button {
     float: right;
     box-sizing: border-box;
     padding: 0.25em 1em;
@@ -78,11 +72,11 @@
     box-shadow: inset 0 1em 1em #fff8;
     transition: background 0.3s;
   }
-  #login .submitsAndHiddens button:focus,
-  #login .submitsAndHiddens button:hover {
+  form .submitsAndHiddens button:focus,
+  form .submitsAndHiddens button:hover {
     background: #8bf;
   }
-  #login p {
+  form p {
     clear: both;
     text-align: center;
     padding: 1em 0;
